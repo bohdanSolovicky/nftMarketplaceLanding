@@ -16,7 +16,13 @@ a {
   text-decoration: none;
 }
 
-.hrd-nav-ul {
+.hdr-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hdr-nav-ul {
   display: flex;
   flex-direction: row;
   text-transform: capitalize;
@@ -49,4 +55,12 @@ a {
 .nav-active {
   font-size: 22px;
   font-weight: 600;
+}
+
+/*если я не ставлю тут такие значения, то понятно что оно не ложится и близко.
+Альтернативно я думал вывести логотип из врапера, сделать его блоком и по центру фигануть, но
+там он тоже не попадает и его надо все равно совать. Как лучше всего сделать?*/
+.hdr-logo {
+  margin-left: -224px;
+  margin-top: -12px;
 }
