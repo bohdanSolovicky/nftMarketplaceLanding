@@ -61,6 +61,55 @@ a {
 Альтернативно я думал вывести логотип из врапера, сделать его блоком и по центру фигануть, но
 там он тоже не попадает и его надо все равно совать. Как лучше всего сделать?*/
 .hdr-logo {
-  margin-left: -224px;
+  margin-left: -13px;
   margin-top: -12px;
+}
+
+.hdr-interaction {
+  display: flex;
+  width: 411px;
+  height: 48px;
+  justify-content: space-between;
+  margin-top: 11px; /* тоже из разряда "щас немного подвину и будет збс*/
+}
+
+.hdr-search-input {
+  display: flex;
+  width: 268px;
+  height: 48px;
+  padding: 12px 12px 12px 44px;
+  border: #00E0FF 1px solid;
+  border-radius: 48px;
+  background: url("/img/svg/searchIcon.svg") no-repeat;
+  background-position: 12px;
+  font-size: 16px;
+  color: #fff;
+}
+
+::placeholder{
+  color:#fff;
+  opacity:1;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+}
+
+::-ms-input-placeholder {
+  color: #fff;
+}
+
+.hdr-search-input:focus {
+  outline: none;
+  /*border: #00E0FF 1px solid;*/
+}
+
+.hdr-profile {
+  display: flex;
+  width: 135px;
+  height: 48px;
+  border: #00E0FF 1px solid;
+  background-color: #989898;
+  border-radius: 48px;
+
 }
