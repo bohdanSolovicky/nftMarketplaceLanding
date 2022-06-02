@@ -5,6 +5,48 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 33px;
+  color: #fff;
+  background-color: #989898;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hrd-nav-ul {
+  display: flex;
+  flex-direction: row;
+  text-transform: capitalize;
+  list-style: none;
+  padding: 0;
+  margin: 19px 0 0 0;
+}
+
+.hdr-nav-item:not(:first-child) {
+  margin-left: 43px;
+}
+
+/*Без этого "костыля" съезжает последний пункт меню на 2пикселя. Если добавить такое же
+на последний элемент, то едет третий пункт меню. Потому я решил костыльнуть так. Тут был вопрос:
+на расширяемом проекте, где могут добавляться пункты меню и быть их больше как теоретически может быть? Типа наплевать
+на перфект пиксель или каждый пункт прорисовывается дизайнером и тогда я подправляю под шаблон*/
+.hdr-nav-item:nth-child(3) {
+  margin-left: 45px;
+}
+
+.nav-link {
+  padding: 5px 5px 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover, .nav-active {
+  color: #00E0FF!important;
+}
+
+.nav-active {
+  font-size: 22px;
+  font-weight: 600;
 }
