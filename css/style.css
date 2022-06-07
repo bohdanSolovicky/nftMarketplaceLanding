@@ -47,6 +47,31 @@ a {
 :-moz-placeholder {
   color: #fff;
 }
+
+.general-title {
+  font-family: "Yeseva One";
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 67px;
+}
+
+.general-text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  opacity: 0.7;
+}
+
+.general-btn {
+  display: flex;
+  width: 200px;
+  height: 59px;
+  padding: 13px 0;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 300;
+}
 /*--- GLOBAL CONFIGURATION end ---*/
 
 /*--- HEADER CONFIGURATION start ---*/
@@ -138,3 +163,89 @@ a {
   text-transform: uppercase;
 }
 /*--- HEADER CONFIGURATION end ---*/
+
+/*--- SCROLL CONFIGURATION start ---*/
+.scroll-wrap {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 130px;
+}
+
+.scroll-card {
+  display: flex;
+  width: 351px;
+  height: 472px;
+  background-color: aquamarine;
+}
+
+.scroll-card:not(:first-child) {
+  margin-left: 92px;
+}
+
+.scroll-card:nth-child(2),.scroll-card:nth-child(3) {
+  margin-top: 279px;
+}
+
+.scroll-text {
+  position: absolute;
+  display: block;
+  width: 634px;
+  top: 188px;
+  left:50%;
+  margin-left: -317px;
+}
+
+.scroll-title {
+  display: inline-block;
+  width: 576px;
+  height: 125px;
+  position: relative;
+  top: -47px;
+  left: 29px;
+  text-align: center;
+  font-family: 'Yeseva One';
+}
+
+.small-title {
+  font-size: 48px;
+  line-height: 55px;
+}
+
+.color-title {
+  color: #00E0FF;
+}
+
+.scroll-content {
+  display: inline-block;
+  width: 632px;
+  height: 42px;
+  position: relative;
+  top: -61px;
+  left: 1px;
+  text-align: center;
+}
+
+.scroll-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: -34px;
+  left: 11px;
+}
+
+.btn-shiny {
+  background: linear-gradient(180deg, #00BED8 0%, #008294 100%);
+  box-shadow: 6px 6px 17px rgba(3, 23, 32, 0.46);
+  border-radius: 20px 4px;
+}
+
+.btn-gray {
+  border: 1px solid #008294;
+  background: linear-gradient(180deg, rgba(0, 190, 216, 0.2) 0%, rgba(0, 130, 148, 0.2) 100%);
+  border-radius: 4px 16px;
+  margin-left: 32px;
+}
+/*--- SCROLL CONFIGURATION end ---*/
