@@ -1,3 +1,4 @@
+/*--- GLOBAL CONFIGURATION start ---*/
 .body-config {
  background: url('/img/svg/bgHeader.svg') no-repeat;
   background-color: #031923;
@@ -6,7 +7,7 @@
   padding: 20px 120px 36px;
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 33px;
   color: #fff;
@@ -17,6 +18,38 @@ a {
   text-decoration: none;
 }
 
+::placeholder{
+  color:#fff;
+  opacity:1;
+}
+
+/*IE placeholder*/
+:-ms-input-placeholder {
+  color: #fff;
+}
+
+/*Edge placeholder*/
+::-ms-input-placeholder {
+  color: #fff;
+}
+
+/*Firefox placeholder*/
+::-moz-placeholder {
+  color: #fff;
+}
+
+/*Opera, Chrome, Safari: old version placeholder*/
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+/*Firefox old version placeholder*/
+:-moz-placeholder {
+  color: #fff;
+}
+/*--- GLOBAL CONFIGURATION end ---*/
+
+/*--- HEADER CONFIGURATION start ---*/
 .hdr-wrap {
   display: flex;
   flex-direction: row;
@@ -30,18 +63,11 @@ a {
   list-style: none;
   padding: 0;
   margin: 19px 0 0 0;
+  letter-spacing: 0.1px;
 }
 
 .hdr-nav-item:not(:first-child) {
-  margin-left: 43px;
-}
-
-/*Без этого "костыля" съезжает последний пункт меню на 2пикселя. Если добавить такое же
-на последний элемент, то едет третий пункт меню. Потому я решил костыльнуть так. Тут был вопрос:
-на расширяемом проекте, где могут добавляться пункты меню и быть их больше как теоретически может быть? Типа наплевать
-на перфект пиксель или каждый пункт прорисовывается дизайнером и тогда я подправляю под шаблон*/
-.hdr-nav-item:nth-child(3) {
-  margin-left: 45px;
+  margin-left: 44px;
 }
 
 .nav-link {
@@ -89,22 +115,10 @@ a {
   color: #fff;
 }
 
-::placeholder{
-  color:#fff;
-  opacity:1;
-}
-
-:-ms-input-placeholder {
-  color: #fff;
-}
-
-::-ms-input-placeholder {
-  color: #fff;
-}
-
 .hdr-search-input:focus {
   outline: none;
 }
+
 /*тут мне не нравится, что я паддингами размещаю текст пиксель-в-пиксель, тупо ровняя.
 Это из розряда "а если там будет другое имя. То, опять же, это диз должен учесть?
 Мы говорим в идеальном мире и конкретно в этом примере. как мне бы надо было поступить"*/
@@ -123,3 +137,4 @@ a {
   font-size: 16px;
   text-transform: uppercase;
 }
+/*--- HEADER CONFIGURATION end ---*/
