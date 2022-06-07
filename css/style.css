@@ -72,6 +72,11 @@ a {
   line-height: 33px;
   font-weight: 300;
 }
+
+.general-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 /*--- GLOBAL CONFIGURATION end ---*/
 
 /*--- HEADER CONFIGURATION start ---*/
