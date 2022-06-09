@@ -75,6 +75,7 @@ a {
 
 .general-btn:hover {
   cursor: pointer;
+  transition: opacity 0.3s ease-in-out 0.3s;
   opacity: 0.8;
 }
 /*--- GLOBAL CONFIGURATION end ---*/
@@ -175,14 +176,40 @@ a {
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 130px;
+  margin-top: 123px; /*changed from 130*/
 }
 
 .scroll-card {
   display: flex;
   width: 351px;
   height: 472px;
-  background-color: aquamarine;
+  background-size: cover;
+}
+
+.scroll-card:nth-child(1) {
+  background: url("/img/svg/cardHorse.svg");
+}
+
+.scroll-card:nth-child(2) {
+  background: url("/img/svg/cardHouse.svg");
+}
+
+/*в самом макете некорректно сделал дизайнер (изначальное изображение не прорисовано с прозрачным бордером)*/
+.scroll-card:nth-child(3) {
+  background: url("/img/svg/cardHorse.svg");
+}
+
+.scroll-card:nth-child(4) {
+  background: url("/img/svg/cardWaterfall.svg");
+}
+
+.scroll-border  {
+  opacity: 0;
+}
+
+.scroll-card:hover .scroll-border {
+  transition: opacity 0.5s ease 0.3s;
+  opacity: 1;
 }
 
 .scroll-card:not(:first-child) {
