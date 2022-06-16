@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+}
+
 ::placeholder{
   color:#fff;
   opacity:1;
@@ -176,7 +180,7 @@ a {
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 123px; /*changed from 130*/
+  margin-top: 123px;
 }
 
 .scroll-card {
@@ -184,6 +188,14 @@ a {
   width: 351px;
   height: 472px;
   background-size: cover;
+  opacity: 0.7;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.scroll-card-wrap {
+  position: absolute;
+  height: 472px; /*если я тут меняю на 100% то, по-ходу, из-за абсолюта эту область растягивает*/
+  width: 351px;
 }
 
 .scroll-card:nth-child(1) {
@@ -205,13 +217,107 @@ a {
 
 .scroll-border  {
   opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.3s;
 }
 
-.scroll-card:hover .scroll-border {
-  transition: opacity 0.5s ease 0.3s;
+.scroll-card-time {
+  position: absolute; /*Тут я не совсем выкупаю проблему. Основная задумка была в том, что я создал врапер
+  который типа абсолют, а внутри него элементы двигаю релативом. Типа как зависимость родительская, вложенность.
+  Но если я тут поставлю релатив, то этот блок подвинет блок с названием карточки, они типа становятся взаимозависимыми
+  или как-то так. Абсолют как бы решил проблему, но есть но, что это не была задумка, а методом тык. Не совсем выкупаю
+  почему именно так*/
+  right: 11px;
+  top: 12px; /*10*/
+  max-width: 111px;
+  padding: 4px 9px 4px 26px;
+  background: rgba(10, 24, 49, 0.4);
+  border: 0.5px solid #FFFFFF;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  opacity: 0.5;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px; /*18*/
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+
+.scroll-card-time::before {
+  content: "";
+  background-image: url("/img/svg/iconTime.svg");
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+}
+
+.scroll-card-title {
+  position: relative;
+  bottom: 56px;
+  left: 17px;
+  font-weight: 400;
+  font-size: 22px;
+  opacity: 0.5;
+  text-transform: capitalize;
+  letter-spacing: 0.1px;
+  transition: bottom 0.3s ease-in-out 0.2s;
+}
+
+.scroll-card-hide {
+  opacity: 0;
+  font-size: 14px;
+  font-weight: 300;
+  transition: opacity 0.3s ease-in-out 0.2s;
+}
+
+.scroll-text-wrap {
+  position: relative;
+  /*width: 100%; этот параметр ничего не дает...почему*/
+  left: 16px;
+  bottom: 98px;
+  line-height: 21px;
+}
+
+.scroll-card-text {
+  opacity: 0.5;
+  text-transform: capitalize;
+}
+
+.scroll-card-bid {
+  margin-left: 21px;
+  text-transform: uppercase;
+}
+
+.scroll-card-bid::before {
+  content: "";
+  background-image: url("/img/svg/iconETH.svg");
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  position: absolute;
+  top: 23px;
+  left: 0;
+}
+
+.scroll-card:hover {
   opacity: 1;
 }
 
+.scroll-card:hover .scroll-border {
+  opacity: 1;
+}
+
+.scroll-card:hover .scroll-card-hide {
+  opacity: 1;
+}
+
+.scroll-card:hover .scroll-card-title{
+  bottom: 102px;
+  color: #00E0FF;
+}
 .scroll-card:not(:first-child) {
   margin-left: 92px;
 }
