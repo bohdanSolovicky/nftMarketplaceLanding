@@ -175,7 +175,7 @@ p {
 /*--- HEADER CONFIGURATION end ---*/
 
 /*--- SCROLL CONFIGURATION start ---*/
-.scroll-wrap {
+.slider-wrap {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -183,7 +183,7 @@ p {
   margin-top: 123px;
 }
 
-.scroll-card {
+.slider-card {
   display: flex;
   width: 351px;
   height: 472px;
@@ -192,35 +192,35 @@ p {
   transition: opacity 0.5s ease-in-out;
 }
 
-.scroll-card-wrap {
+.slider-card-wrap {
   position: absolute;
   height: 472px; /*если я тут меняю на 100% то, по-ходу, из-за абсолюта эту область растягивает*/
   width: 351px;
 }
 
-.scroll-card:nth-child(1) {
+.slider-card:nth-child(1) {
   background: url("/img/svg/cardHorse.svg");
 }
 
-.scroll-card:nth-child(2) {
+.slider-card:nth-child(2) {
   background: url("/img/svg/cardHouse.svg");
 }
 
 /*в самом макете некорректно сделал дизайнер (изначальное изображение не прорисовано с прозрачным бордером)*/
-.scroll-card:nth-child(3) {
+.slider-card:nth-child(3) {
   background: url("/img/svg/cardHorse.svg");
 }
 
-.scroll-card:nth-child(4) {
+.slider-card:nth-child(4) {
   background: url("/img/svg/cardWaterfall.svg");
 }
 
-.scroll-border  {
+.slider-border  {
   opacity: 0;
   transition: opacity 0.5s ease-in-out 0.3s;
 }
 
-.scroll-card-time {
+.slider-card-time {
   position: absolute; /*Тут я не совсем выкупаю проблему. Основная задумка была в том, что я создал врапер
   который типа абсолют, а внутри него элементы двигаю релативом. Типа как зависимость родительская, вложенность.
   Но если я тут поставлю релатив, то этот блок подвинет блок с названием карточки, они типа становятся взаимозависимыми
@@ -243,7 +243,7 @@ p {
   letter-spacing: 0;
 }
 
-.scroll-card-time::before {
+.slider-card-time::before {
   content: "";
   background-image: url("/img/svg/iconTime.svg");
   position: absolute;
@@ -254,7 +254,7 @@ p {
   background-size: 16px 16px;
 }
 
-.scroll-card-title {
+.slider-card-title {
   position: relative;
   bottom: 56px;
   left: 17px;
@@ -266,14 +266,14 @@ p {
   transition: bottom 0.3s ease-in-out 0.2s;
 }
 
-.scroll-card-hide {
+.slider-card-hide {
   opacity: 0;
   font-size: 14px;
   font-weight: 300;
   transition: opacity 0.3s ease-in-out 0.2s;
 }
 
-.scroll-text-wrap {
+.slider-text-wrap {
   position: relative;
   /*width: 100%; этот параметр ничего не дает...почему*/
   left: 16px;
@@ -281,17 +281,17 @@ p {
   line-height: 21px;
 }
 
-.scroll-card-text {
+.slider-card-text {
   opacity: 0.5;
   text-transform: capitalize;
 }
 
-.scroll-card-bid {
+.slider-card-bid {
   margin-left: 21px;
   text-transform: uppercase;
 }
 
-.scroll-card-bid::before {
+.slider-card-bid::before {
   content: "";
   background-image: url("/img/svg/iconETH.svg");
   width: 20px;
@@ -302,31 +302,31 @@ p {
   left: 0;
 }
 
-.scroll-card:hover {
+.slider-card:hover {
   opacity: 1;
 }
 
-.scroll-card:hover .scroll-border {
+.slider-card:hover .slider-border {
   opacity: 1;
 }
 
-.scroll-card:hover .scroll-card-hide {
+.slider-card:hover .slider-card-hide {
   opacity: 1;
 }
 
-.scroll-card:hover .scroll-card-title{
+.slider-card:hover .slider-card-title{
   bottom: 102px;
   color: #00E0FF;
 }
-.scroll-card:not(:first-child) {
+.slider-card:not(:first-child) {
   margin-left: 92px;
 }
 
-.scroll-card:nth-child(2),.scroll-card:nth-child(3) {
+.slider-card:nth-child(2),.slider-card:nth-child(3) {
   margin-top: 279px;
 }
 
-.scroll-text {
+.slider-text {
   position: absolute;
   display: block;
   width: 634px;
@@ -335,7 +335,7 @@ p {
   margin-left: -317px;
 }
 
-.scroll-title {
+.slider-title {
   display: inline-block;
   width: 576px;
   height: 125px;
@@ -355,7 +355,7 @@ p {
   color: #00E0FF;
 }
 
-.scroll-content {
+.slider-content {
   display: inline-block;
   width: 632px;
   height: 42px;
@@ -365,7 +365,7 @@ p {
   text-align: center;
 }
 
-.scroll-btn {
+.slider-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
